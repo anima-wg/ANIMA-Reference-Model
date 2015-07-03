@@ -12,3 +12,10 @@ ${DRAFT}-${VERSION}.txt: ${DRAFT}.txt
 %.html: %.xml
 	unset DISPLAY; XML_LIBRARY=$(XML_LIBRARY):./src xml2rfc --html -o $@ $?
 
+
+DIAGRAMS=network1-reference.svg network2-discovery.svg network3-identity.svg network4-identity.svg
+DIAGRAMS+=network5-imprint.svg network6-domainjoined.svg network7-secured.svg network8-uplink-discovery.dia
+diagrams: ${DIAGRAMS}
+
+%.svg: %.dia
+	dia --export=$@ --filter=svg $<
