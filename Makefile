@@ -14,7 +14,7 @@ ${DRAFT}-${VERSION}.txt: ${DRAFT}.txt
 
 
 DIAGRAMS=network1-reference.svg network2-awareness.svg network3-discovery.svg network4-identity.svg network5-routing.svg
-DIAGRAMS+=network6-imprint.svg network7-domainjoined.svg network8-secured.svg network9-uplink-discovery.dia
+DIAGRAMS+=network6-imprint.svg network7-domainjoined.svg network8-secured.svg network9-uplink-discovery.svg
 diagrams: ${DIAGRAMS}
 
 %.svg: %.dia
