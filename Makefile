@@ -13,8 +13,8 @@ ${DRAFT}-${VERSION}.txt: ${DRAFT}.txt
 	unset DISPLAY; XML_LIBRARY=$(XML_LIBRARY):./src xml2rfc --html -o $@ $?
 
 
-DIAGRAMS=network1-reference.svg network2-discovery.svg network3-identity.svg network4-identity.svg
-DIAGRAMS+=network5-imprint.svg network6-domainjoined.svg network7-secured.svg network8-uplink-discovery.dia
+DIAGRAMS=network1-reference.svg network2-awareness.svg network3-discovery.svg network4-identity.svg network5-routing.svg
+DIAGRAMS+=network6-imprint.svg network7-domainjoined.svg network8-secured.svg network9-uplink-discovery.dia
 diagrams: ${DIAGRAMS}
 
 %.svg: %.dia
